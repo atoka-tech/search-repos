@@ -1,0 +1,28 @@
+@keyframes spinner {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.spinner {
+  display: none;
+  background: #000;
+  border-radius: 50%;
+  animation: spinner 0.7s infinite;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.is-loading .spinner {
+  display: inline-block;
+}
