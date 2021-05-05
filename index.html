@@ -5,20 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search repos</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/import.css" />
   </head>
-  <body>
-    <div id="app">
-      <div class="input">
-        <input type="text" placeholder="Search" />
-        <span class="spinner"></span>
+  <body class="hidden">
+    <div class="app">
+      <div class="input-box">
+        <h1>Searching on GitHub</h1>
+        <div class="input-wrap">
+          <input type="text" required />
+          <label>Input query*</label>
+          <span class="spinner"></span>
+        </div>
+        <p class="ref">
+          <a
+            href="https://docs.github.com/github/searching-for-information-on-github/searching-for-repositories"
+            target="_blank"
+            >*For more information about query, see here.</a
+          >
+        </p>
       </div>
-      <p class="message"></p>
-      <ul class="results"></ul>
+
+      <div class="results">
+        <div class="results-header">
+          <div class="message"></div>
+          <div class="sort"></div>
+        </div>
+        <div class="repositories"></div>
+        <div class="paginate"></div>
+      </div>
     </div>
 
-
-    <script src="utils.js" type="module"></script>
-    <script src="script.js" type="module"></script>
+    <script src="assets/js/utils.js" type="module"></script>
+    <script src="assets/js/script.js" type="module"></script>
   </body>
 </html>
