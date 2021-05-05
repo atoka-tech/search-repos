@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-base: #262621;
+  --color-1: #4f5954;
+  --color-2: #878c80;
+  --color-3: #bdbfae;
+}
+
+body {
+  background: var(--color-base);
+  color: #fff;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+strong {
+  color: #ffd403;
+}
