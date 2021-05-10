@@ -7,6 +7,15 @@ const emphasize = (str, q) => {
   return str.replace(regex, "<strong>$1</strong>");
 };
 
+const escapeHtml = (unsafe) => {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+};
+
 const $li = ({
   htmlUrl,
   fullName,
@@ -36,8 +45,8 @@ export const repositoriesView = ({ el, items, q }) => {
       "beforeend",
       $li({
         htmlUrl: item.html_url,
-        fullName: emphasize(item.full_name, q),
-        description: emphasize(item.description, q),
+        fullName: emphasize(escapeHtml(item.full_name), q),
+        description: emphasize(escapeHtml(item.description), q),
         language: item.language,
         stargazersCount: item.stargazers_count,
         updatedAt: item.updated_at,
