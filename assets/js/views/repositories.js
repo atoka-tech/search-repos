@@ -8,6 +8,8 @@ const emphasize = (str, q) => {
 };
 
 const escapeHtml = (unsafe) => {
+  if (!unsafe) return "";
+
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
